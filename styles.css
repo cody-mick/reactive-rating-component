@@ -1,0 +1,105 @@
+:root {
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-light-gray: hsl(217, 12%, 63%);
+    --neutral-medium-gray: hsl(216, 12%, 54%);
+    --neutral-dark-blue: hsl(213, 19%, 18%);
+    --neutral-very-dark-blue: hsl(216, 12%, 8%);
+
+    --primary-orange: hsl(25, 97%, 53%);
+
+    --body-font-size: 15px;
+    --fw-400: 400;
+    --fw-700: 700;
+    --font: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: var(--neutral-white);
+}
+
+.rating-box {
+    background-color: var(--neutral-very-dark-blue);
+    width: 20%;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.star-icon {
+    width: 15px;
+    background-color: var(--neutral-dark-blue);
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.rating-box > h1 {
+    font-family: var(--font);
+    font-weight: var(--fw-700);
+}
+
+.rating-box > p {
+    font-family: var(--font);
+    font-weight: var(--fw-400);
+    color: var(--neutral-light-gray);
+}
+
+.rating-number {
+    font-family: var(--font);
+    color: var(--neutral-light-gray);
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating-number > div {
+    background-color: var(--neutral-dark-blue);
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.rating-number > div:hover {
+    cursor: pointer;
+    background-color: var(--primary-orange);
+    color: var(--neutral-white);
+}
+
+.rating-number > .selected {
+    background-color: var(--neutral-light-gray);
+    color: var(--neutral-white);
+}
+
+.rating-submit {
+    background-color: var(--primary-orange);
+    color: var(--neutral-white);
+    font-family: var(--font);
+    border: none;
+    padding: 1em;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.rating-submit:hover {
+    cursor: pointer;
+    background-color: var(--neutral-white);
+    color: var(--primary-orange);
+}
+
+.hidden {
+    display: none;
+}
