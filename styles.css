@@ -1,105 +1,146 @@
 :root {
-    --neutral-white: hsl(0, 0%, 100%);
-    --neutral-light-gray: hsl(217, 12%, 63%);
-    --neutral-medium-gray: hsl(216, 12%, 54%);
-    --neutral-dark-blue: hsl(213, 19%, 18%);
-    --neutral-very-dark-blue: hsl(216, 12%, 8%);
+	--neutral-white: hsl(0, 0%, 100%);
+	--neutral-light-gray: hsl(217, 12%, 63%);
+	--neutral-medium-gray: hsl(216, 12%, 54%);
+	--neutral-dark-blue: hsl(213, 19%, 18%);
+	--neutral-very-dark-blue: hsl(216, 12%, 8%);
 
-    --primary-orange: hsl(25, 97%, 53%);
+	--primary-orange: hsl(25, 97%, 53%);
 
-    --body-font-size: 15px;
-    --fw-400: 400;
-    --fw-700: 700;
-    --font: 'Overpass', sans-serif;
+	--body-font-size: 15px;
+	--fw-400: 400;
+	--fw-700: 700;
+	--font: "Overpass", sans-serif;
 }
 
 body {
-    background-color: black;
-    color: var(--neutral-white);
+	background-color: black;
+	color: var(--neutral-white);
 }
 
-.rating-box {
-    background-color: var(--neutral-very-dark-blue);
-    width: 20%;
-    margin: auto;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+.rating-box,
+.thank-you {
+	background-color: var(--neutral-very-dark-blue);
+	width: 20%;
+	margin: 0 auto;
+	margin-top: 10rem;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
 }
 
 .star-icon {
-    width: 15px;
-    background-color: var(--neutral-dark-blue);
-    padding: 10px;
-    border-radius: 100%;
+	width: 15px;
+	background-color: var(--neutral-dark-blue);
+	padding: 10px;
+	border-radius: 100%;
 }
 
 .rating-box > h1 {
-    font-family: var(--font);
-    font-weight: var(--fw-700);
+	font-family: var(--font);
+	font-weight: var(--fw-700);
 }
 
 .rating-box > p {
-    font-family: var(--font);
-    font-weight: var(--fw-400);
-    color: var(--neutral-light-gray);
+	font-family: var(--font);
+	font-weight: var(--fw-400);
+	color: var(--neutral-light-gray);
 }
 
 .rating-number {
-    font-family: var(--font);
-    color: var(--neutral-light-gray);
-    display: flex;
-    justify-content: space-around;
+	font-family: var(--font);
+	color: var(--neutral-light-gray);
+	display: flex;
+	justify-content: space-around;
 }
 
 .rating-number > div {
-    background-color: var(--neutral-dark-blue);
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1.75rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
+	background-color: var(--neutral-dark-blue);
+	width: 50px;
+	height: 50px;
+	margin-bottom: 1.75rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
 }
 
 .rating-number > div:hover {
-    cursor: pointer;
-    background-color: var(--primary-orange);
-    color: var(--neutral-white);
+	cursor: pointer;
+	background-color: var(--primary-orange);
+	color: var(--neutral-white);
 }
 
 .rating-number > .selected {
-    background-color: var(--neutral-light-gray);
-    color: var(--neutral-white);
+	background-color: var(--neutral-light-gray);
+	color: var(--neutral-white);
 }
 
 .rating-submit {
-    background-color: var(--primary-orange);
-    color: var(--neutral-white);
-    font-family: var(--font);
-    border: none;
-    padding: 1em;
-    border-radius: 25px;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    transition: all 0.3s ease;
-    height: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
+	background-color: var(--primary-orange);
+	color: var(--neutral-white);
+	font-family: var(--font);
+	border: none;
+	padding: 1em;
+	border-radius: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 3px;
+	transition: all 0.3s ease;
+	height: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
 }
 
 .rating-submit:hover {
-    cursor: pointer;
-    background-color: var(--neutral-white);
-    color: var(--primary-orange);
+	cursor: pointer;
+	background-color: var(--neutral-white);
+	color: var(--primary-orange);
+}
+
+.thank-you-icon {
+	width: 65%;
+	margin: auto;
+}
+
+.rating-display {
+	color: var(--primary-orange);
+	padding: 8px;
+	background-color: var(--neutral-dark-blue);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60%;
+	margin: auto;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.thank-you-title {
+	font-size: 1.5rem;
+	font-weight: var(--fw-700);
+	text-align: center;
+}
+
+.thank-you-text {
+	color: var(--neutral-light-gray);
+	text-align: center;
+	line-height: 1.6;
+	font-size: smaller;
 }
 
 .hidden {
-    display: none;
+	display: none;
+}
+
+@media screen and (max-width: 375px) {
+	.rating-box,
+	.thank-you {
+		width: 80%;
+	}
 }
